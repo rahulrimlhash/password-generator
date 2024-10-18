@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #ffe6cc; /* Light orange background */
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff6f00; /* Swiggy orange */
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ff6f00; /* Orange border */
+        }
+        select, input[type="submit"] {
+            margin-bottom: 15px;
+        }
+        input[type="submit"] {
+            background-color: #ff6f00; /* Swiggy orange button */
+            border-color: #ff6f00;
+            color: white;
+        }
+        input[type="submit"]:hover {
+            background-color: #e65c00; /* Darker orange on hover */
+        }
+        .form-check {
+            margin-bottom: 10px;
+        }
+        .form-check-label {
+            color: #ff6f00; /* Orange text for labels */
+        }
+        label {
+            color: #e65c00; /* Darker orange for form labels */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Password Generator</h1>
+        <form action="password" class="mx-auto" style="max-width: 400px;">
+            <div class="form-group">
+                <label for="length">Select Password Length:</label>
+                <select name="length" id="length" class="form-control">
+                    <option value='6'>6</option>
+                    <option value='7'>7</option>
+                    <option value='8'>8</option>
+                    <option value='9' selected='selected'>9</option>
+                    <option value='10'>10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                </select>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" name="uppercase" class="form-check-input" id="uppercase">
+                <label class="form-check-label" for="uppercase">Include Uppercase Letters</label>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" name="numbers" class="form-check-input" id="numbers">
+                <label class="form-check-label" for="numbers">Include Numbers</label>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" name="special" class="form-check-input" id="special">
+                <label class="form-check-label" for="special">Include Special Characters</label>
+            </div>
+
+            <input type="submit" value="Generate Password" class="btn btn-warning btn-block">
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkP91VjPBK1yegihTZ7qrFxMoxgaP5YdE6k+OGLv9A8ABp+Lpb9" crossorigin="anonymous"></script>
+</body>
+</html>
